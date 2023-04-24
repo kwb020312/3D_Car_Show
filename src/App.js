@@ -1,7 +1,12 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import "./style.css";
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import {
+  OrbitControls,
+  PerspectiveCamera,
+  Environment,
+  CubeCamera,
+} from "@react-three/drei";
 import Ground from "./Ground";
 import Car from "./Car";
 import Rings from "./Rings";
@@ -11,8 +16,18 @@ function CarShow() {
     <>
       <OrbitControls target={[0, 0.35, 0]} maxPolarAngle={1.45} />
       <PerspectiveCamera makeDefault fov={50} position={[3, 2, 5]} />
-      {<color args={[0, 0, 0]} attach={"background"} />}
-      <Car />
+      <color args={[0, 0, 0]} attach={"background"} />
+      <CubeCamera resolution={256} frames={Infinity}>
+        {(texture) => (
+          <>
+            <Environment map={texture} />
+            <Car />
+          </>
+        )}
+      </CubeCamera>
+
+      <Rings />
+
       <spotLight
         color={[1, 0.25, 0.7]}
         intensity={1.5}
@@ -32,7 +47,6 @@ function CarShow() {
         shadow-bias={-0.0001}
       />
       <Ground />
-      <Rings />
     </>
   );
 }
