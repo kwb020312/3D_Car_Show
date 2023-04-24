@@ -4,6 +4,7 @@ import "./style.css";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import Ground from "./Ground";
 import Car from "./Car";
+import Rings from "./Rings";
 
 function CarShow() {
   return (
@@ -31,6 +32,7 @@ function CarShow() {
         shadow-bias={-0.0001}
       />
       <Ground />
+      <Rings />
     </>
   );
 }
