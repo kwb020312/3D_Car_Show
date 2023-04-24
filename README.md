@@ -4,11 +4,11 @@
 
 ### ⛱지형 추가
 
-![image](https://user-images.githubusercontent.com/46777310/234020397-ddf2a521-3e2c-45d1-bb7c-8b5902ba04c5.png)
+![image](https://user-images.githubusercontent.com/46777310/234020127-e2af6d43-5a49-44b4-9676-c06c15af8017.png)
 
 ### 🚓차량 추가
 
-![image](https://user-images.githubusercontent.com/46777310/234020127-e2af6d43-5a49-44b4-9676-c06c15af8017.png)
+![image](https://user-images.githubusercontent.com/46777310/234020397-ddf2a521-3e2c-45d1-bb7c-8b5902ba04c5.png)
 
 ### 🎇광원 추가
 
