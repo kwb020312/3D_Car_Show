@@ -1,4 +1,4 @@
-import { useLoader } from "@react-three/fiber";
+import { useFrame, useLoader } from "@react-three/fiber";
 import React, { useEffect } from "react";
 import { RepeatWrapping, TextureLoader } from "three";
 
@@ -12,6 +12,11 @@ const FloatingGrid = () => {
     diffuse.repeat.set(30, 30);
     diffuse.offset.set(0, 0);
   }, [diffuse]);
+
+  useFrame((state, delta) => {
+    const t = -state.clock.getElapsedTime() * 0.68;
+    diffuse.offset.set(0, t);
+  });
 
   return (
     <mesh rotation-x={-Math.PI * 0.5} position={[0, 0.425, 0]}>

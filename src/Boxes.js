@@ -21,7 +21,7 @@ const Box = ({ color }) => {
   const [xRotSpeed] = useState(() => Math.random());
   const [yRotSpeed] = useState(() => Math.random());
   const [scale] = useState(() => Math.pow(Math.random(), 2.0) * 0.5 + 0.05);
-  const [position, setPosition] = useState(resetPosition());
+  const [position, setPosition] = useState(resetPosition);
 
   useFrame(
     (state, delta) => {
