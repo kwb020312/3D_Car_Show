@@ -23,7 +23,7 @@ const Box = ({ color }) => {
   const [scale] = useState(() => Math.pow(Math.random(), 2.0) * 0.5 + 0.05);
   const [position, setPosition] = useState(getInitialPosition);
 
-  const resetPosition = useMemo(() => {
+  const resetPosition = () => {
     const v = new Vector3(
       (Math.random() * 2 - 1) * 3,
       Math.random() * 2.5 + 0.1,
@@ -34,7 +34,7 @@ const Box = ({ color }) => {
     if (v.x > 0) v.x += 1.75;
 
     setPosition(v);
-  }, []);
+  };
 
   useFrame(
     (state, delta) => {
