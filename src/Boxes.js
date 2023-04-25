@@ -1,9 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useMemo, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Vector3 } from "three";
 
 const Box = ({ color }) => {
-  const resetPosition = () => {
+  const resetPosition = useMemo(() => {
     const v = new Vector3(
       (Math.random() * 2 - 1) * 3,
       Math.random() * 2.5 + 0.1,
@@ -15,7 +15,7 @@ const Box = ({ color }) => {
 
     // setPosition(v);
     return v;
-  };
+  }, []);
 
   const box = useRef();
   const [xRotSpeed] = useState(() => Math.random());
