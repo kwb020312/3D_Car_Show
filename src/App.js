@@ -10,6 +10,7 @@ import {
 import Ground from "./Ground";
 import Car from "./Car";
 import Rings from "./Rings";
+import Loader from "./Loader";
 import { Boxes } from "./Boxes";
 import {
   Bloom,
@@ -84,7 +85,7 @@ function CarShow() {
 
 function App() {
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<Loader />}>
       <Canvas shadows>
         <CarShow />
       </Canvas>
