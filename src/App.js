@@ -10,6 +10,7 @@ import {
 import Ground from "./Ground";
 import Car from "./Car";
 import Rings from "./Rings";
+import { Boxes } from "./Boxes";
 
 function CarShow() {
   return (
@@ -47,6 +48,7 @@ function CarShow() {
         shadow-bias={-0.0001}
       />
       <Ground />
+      <Boxes />
     </>
   );
 }
