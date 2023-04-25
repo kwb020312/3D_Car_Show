@@ -23,7 +23,9 @@ const Loader = () => {
           marginTop: 40,
         }}
       >
-        🛺자동차 불러오는 중..{progress.toFixed(2)}%
+        🛺자동차 불러오는 중..
+        <br/>
+        {progress.toFixed(2)}%
       </p>
     </Html>
   );
