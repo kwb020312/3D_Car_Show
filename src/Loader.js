@@ -12,20 +12,19 @@ const Loader = () => {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
+        width: "9999px"
       }}
     >
       <span className="canvas-loader"></span>
       <p
         style={{
-          fontSize: 14,
+          fontSize: 20,
           color: "black",
           fontWeight: 800,
           marginTop: 40,
         }}
       >
-        🛺자동차 불러오는 중..
-        <br/>
-        {progress.toFixed(2)}%
+        🛺자동차 불러오는 중..{progress.toFixed(2)}%
       </p>
     </Html>
   );
